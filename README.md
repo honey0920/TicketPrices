@@ -1,5 +1,5 @@
 # TicketPrices
-用python爬虫抓取洪山区不同网络平台的电影票信息并比较价格。参考了[MovieTickets](https://github.com/LiangCY/MovieTickets)项目。利用requets / beautifulsoup / PhantomJS / selenium抓包，flask作为网站的框架，pymango用来存储数据。
+用python爬虫抓取洪山区不同网络平台的电影票信息并比较价格。参考了[MovieTickets](https://github.com/LiangCY/MovieTickets)项目。利用requets / beautifulsoup / PhantomJS / selenium抓包爬虫，flask作为网站的框架，pymango用来存储数据。
 
 ### 使用方法
 * 运行python run.py
