@@ -1,0 +1,34 @@
+<!doctype html>
+<head>
+<title>价格</title>
+<meta name="Microsoft Theme" content="iris 1011">
+<style type="text/css">
+.table_title{font-family: Calibri;font-size: 12pt;font-weight:bold;width:160px; height:50px;text-align: center;}
+.table_tname{font-family: Calibri;font-size: 12pt;font-weight:bold;width:250px; height:50px;text-align: center;}
+.table_text{font-family: Calibri;font-size: 12pt;font-weight:normal;width:160px; height:50px;text-align: center;}
+.table_name{font-family: Calibri;font-size: 12pt;font-weight:normal;width:250px; height:50px;text-align: center;}
+
+</style>
+</head>
+<body>
+<h2>{{movie}} - {{cinema}}</h2>
+<hr style="height:1px;border:none;border-top:1px dashed #646464;" />
+<table>
+	<tr>
+	<td class="table_tname">时间</td>
+	<td class="table_title">淘宝价格</td>
+	<td class="table_title">美团价格</td>
+	<td class="table_title">点评价格</td>
+	<td class="table_title">格瓦拉价格</td>
+	</tr>
+	{% for ticket in tickets %}
+	<tr>
+	<td class="table_name">{{ticket.Date}}</td>
+	<td class="table_text">{{ticket.taobaoPrice}}</td>
+	<td class="table_text">{{ticket.meituanPrice}}</td>
+	<td class="table_text">{{ticket.dianpingPrice}}</td>
+	<td class="table_text">{{ticket.gewalaPrice}}</td>
+	</tr>
+	{% endfor %}
+</table>
+</body>

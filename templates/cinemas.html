@@ -1,0 +1,40 @@
+<!doctype html>
+<head>
+<title>选择影院</title>
+<meta name="Microsoft Theme" content="iris 1011">
+<style type="text/css">
+.table_title{font-family: Calibri;font-size: 12pt;font-weight:bold;width:160px; height:50px}
+.table_tname{font-family: Calibri;font-size: 12pt;font-weight:bold;width:250px; height:50px}
+.table_text{font-family: Calibri;font-size: 12pt;font-weight:normal;width:160px; height:50px}
+.table_name{font-family: Calibri;font-size: 12pt;font-weight:normal;width:250px; height:50px}
+
+</style>
+</head>
+<body>
+<h2>{{movie.name}}</h2>
+
+<hr style="height:1px;border:none;border-top:1px dashed #646464;" />
+<table>
+	<tr>
+	<td class="table_tname">影院</td>
+	<td class="table_tname">地址</td>
+	<td class="table_title">淘宝ID</td>
+	<td class="table_title">美团ID</td>
+	<td class="table_title">点评ID</td>
+	<td class="table_title">格瓦拉ID</td>
+	</tr>
+	{% for cinema in cinemas %}
+	<tr>
+	<td class="table_name">
+		<a href={{ "/prices/movieID=" + movie.taobaoID+"&cinemaID="+ cinema.taobaoID }} > {{cinema.name}}
+		</a>
+	</td>
+	<td class="table_name">{{cinema.address}}</td>
+	<td class="table_text">{{cinema.taobaoID}}</td>
+	<td class="table_text">{{cinema.meituanID}}</td>
+	<td class="table_text">{{cinema.dianpingID}}</td>
+	<td class="table_text">{{cinema.gewalaID}}</td>
+	</tr>
+	{% endfor %}
+</table>
+</body>
